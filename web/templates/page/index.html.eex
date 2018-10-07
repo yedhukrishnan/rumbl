@@ -1,8 +1,23 @@
 <div class="jumbotron">
-  <h2>Rubl.io!</h2>
+  <h2>Rumbl.io!</h2>
 </div>
+
+<center>
+<h1><a href="/users/new">Create New User</a></h1>
+<h1><a href="/users">View All Users</a></h1>
+<h1><a onclick="genRandomErrorURL();" id="randomLink">Error page</a></h1>
+</center>
 
 <div class="row marketing">
   <div class="col-lg-6">
   </div>
 </div>
+
+<script type="text/javascript">
+
+	function genRandomErrorURL() {
+		document.getElementById("randomLink").setAttribute("href", "/".concat(Math.random().toString(30).substring(4)));
+		return false;
+	}
+
+</script>
