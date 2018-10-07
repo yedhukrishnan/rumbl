@@ -20,6 +20,8 @@ defmodule Rumbl.Router do
     get "/", PageController, :index
     resources "/users", UserController, only: [:index, :show, :new, :create]
     resources "/sessions", SessionController, only: [:new, :create, :delete]
+
+    get "/*path", RedirectController, :redirector
   end
 
   # Other scopes may use custom stacks.
